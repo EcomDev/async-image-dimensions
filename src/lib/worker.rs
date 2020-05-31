@@ -24,6 +24,16 @@ impl ImageDimensions {
             image_type
         }
     }
+
+    pub fn mime_type<'a>(&self) -> &'a str {
+        match self.image_type {
+            ImageType::JPEG => "image/jpeg",
+            ImageType::PNG => "image/png",
+            ImageType::GIF => "image/gif",
+            ImageType::WEBP => "image/webp",
+            ImageType::GENERIC => "image/generic"
+        }
+    }
 }
 
 #[derive(PartialEq, Debug)]
