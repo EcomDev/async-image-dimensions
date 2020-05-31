@@ -8,14 +8,14 @@ pub struct InputCommand(String);
 
 #[derive(PartialEq, Debug)]
 pub struct ImageDimensions {
-    src: String,
-    width: usize,
-    height: usize,
-    image_type: ImageType
+    pub src: String,
+    pub width: usize,
+    pub height: usize,
+    pub image_type: ImageType
 }
 
 impl ImageDimensions {
-    fn new(src: String, width: usize, height: usize, image_type: ImageType) -> Self
+    pub fn new(src: String, width: usize, height: usize, image_type: ImageType) -> Self
     {
         ImageDimensions {
             src,
